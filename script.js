@@ -24,10 +24,10 @@ function downloadImages(){
 
 	loading.style.display = "block";
 
-	Promise.all(images.map(img =>downloadImage(image.url)))
-	.then(loadedImages => {
+	Promise.all(images.map(downloadImage))
+	.then(images => {
 		loading.style.display = "none";
-		loadedImages.forEach(img => output.appendChild(img));
+		images.forEach(img => output.appendChild(img));
 	})
 	.catch(err =>{
 		loading.style.display = "none";
