@@ -24,8 +24,8 @@ function downloadImages(){
 
 	loading.style.display = "block";
 
-	Promise.all(images.map(img =>downloadImage(img.url)))
-	.then(downloadImages => {
+	Promise.all(images.map(img =>downloadImage(image.url)))
+	.then(loadedImages => {
 		loading.style.display = "none";
 		loadedImages.forEach(img => output.appendChild(img));
 	})
