@@ -34,4 +34,4 @@ function downloadImages(){
 		error.textContent = err.message;
 	});
 }
-btn.addEventListener("click" downloadImages);
+btn.addEventListener("click", downloadImages);
