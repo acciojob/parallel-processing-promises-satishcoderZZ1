@@ -11,7 +11,7 @@ const images = [
 ];
 
 function downloadImage(url){
-	return new Promist((resolve, reject)=>{
+	return new Promise((resolve, reject)=>{
 		const img = new Image();
 		img.src = url;
 		img.onload = () => resolve(img);
